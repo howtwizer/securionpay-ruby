@@ -16,8 +16,8 @@ module SecurionPay
       web_consumer.post(url(path), request_body(body))
     end
 
-    def self.delete(path)
-      web_consumer.delete(url(path), request_body)
+    def self.delete(path, body = nil)
+      web_consumer.delete(url(path), request_body(body))
     end
 
     def self.url(path)
@@ -26,7 +26,7 @@ module SecurionPay
 
     def self.request_body(body = nil)
       {
-        body: body,
+        body:       body,
         basic_auth: {
           username: Configuration.secret_key
         }

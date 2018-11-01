@@ -52,8 +52,8 @@ describe SecurionPay::Subscriptions do
     let(:http_method) { :delete }
     let(:method) { :delete }
     let(:path_builder_with) { [customer_id, subscription_id] }
-    let(:subject_send_with) { [customer_id, subscription_id] }
-    let(:communicator_with) { nil }
+    let(:subject_send_with) { [customer_id, subscription_id, params] }
+    let(:communicator_with) { params }
     it_behaves_like 'call_communicator'
   end
 

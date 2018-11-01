@@ -193,8 +193,10 @@ Delete an existing subscription object.
 ```ruby
 customer_id = 'cust_id'
 subscription_id = 'subscription_id'
-
-SecurionPay::Subscriptions.delete(customer_id, subscription_id)
+options = {
+  atPeriodEnd: true # Whatever or not delay cancellation of subscription until the end of the current period. By default subscription is canceled immediately.
+}
+SecurionPay::Subscriptions.delete(customer_id, subscription_id, options)
 ```
 
 ### Create a new Plan

@@ -22,9 +22,10 @@ module SecurionPay
       )
     end
 
-    def self.delete(customer_id, subscription_id)
+    def self.delete(customer_id, subscription_id, params)
       communicator.delete(
-        path_builder.build_subscriptions_path(customer_id, subscription_id)
+        path_builder.build_subscriptions_path(customer_id, subscription_id),
+        params
       )
     end
 
