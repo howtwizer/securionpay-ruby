@@ -9,6 +9,7 @@ require 'securionpay/customer_records'
 require 'securionpay/customers'
 require 'securionpay/subscriptions'
 require 'securionpay/plans'
+require 'securionpay/events'
 require 'securionpay/version'
 
 require 'securionpay/builders/path_builder'

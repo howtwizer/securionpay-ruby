@@ -33,6 +33,14 @@ module SecurionPay
         end
       end
 
+      def self.build_events_path(event_id = nil)
+        if event_id
+          "/events/#{event_id}"
+        else
+          "/events"
+        end
+      end
+
       def self.build_blacklist_path(blacklist_rule_id = nil)
         if blacklist_rule_id
           "/blacklist/#{blacklist_rule_id}"
